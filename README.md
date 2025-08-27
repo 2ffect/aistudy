@@ -20,7 +20,6 @@ config = ModelConfig(
     use_lora=True,
     lora_r=16,
     lora_alpha=32,
-    lora_dropout=0.1,
     max_length=64
 )
 
