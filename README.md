@@ -1,7 +1,11 @@
 # 커스터마이징
 ## 1. 다른 모델 사용
 적용 모델 : `facebook/bart-base`
+<br>
+
 디바이스  : `device='cuda'`
+<br>
+
 적용 이유 :
 - 짧은 불만/문의 문장 분류에 성능이 안정적임
 - 토큰 타입 의존이 없어서 전처리가 단순함
@@ -66,6 +70,8 @@ device       = "cuda"
 `inference.py`의 `model_path`를
 
 동적 양자화: `models/quantized_dynamic`
+<br>
+
 4비트 양자화: `models/quantized_4bit`
 
 ---
