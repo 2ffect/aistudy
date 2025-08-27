@@ -1,0 +1,20 @@
+# python 3.11.8
+--extra-index-url https://download.pytorch.org/whl/cu126 # cuda12.6 toolkit으로 설치
+torch==2.8.0
+transformers==4.53.0
+datasets==3.6.0
+pandas==2.3.0
+numpy==1.24.3
+peft==0.15.2
+bitsandbytes==0.46.0
+scikit-learn==1.7.0
+evaluate==0.4.4
+protobuf==3.20.3
+pydantic==2.11.7
+tqdm>=4.66.4
+sentencepiece
+rouge_score
+bert_score
+trl==0.19.1
+seaborn==0.13.2
+accelerate==1.9.0
