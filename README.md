@@ -33,14 +33,14 @@ device       = "cuda"
 4. 입력이 한두 문장 위주라 `max_length=64`로 불필요한 패딩을 줄여 속도 ↑
 
 ## 3. 모델 성능
-![alt text](f1_score.png)
+![alt text](/text_classification-main/f1_score.png)
 - 테스트 정확도 0.8863 
 - F1(weighted) 0.8869 
 - F1(macro) 0.8862
 - 세 클래스가 고르게 맞춰져 매크로/마이크로 F1이 비슷하게 나온 점이 안정적
 
 ## 4. 추론 결과
-![alt text](inference.png)
+![alt text](/text_classification-main/inference.png)
 - 예시 문장에 대해 billing / delivery / product가 명확히 구분가능
   - “You charged my old card again.” → billing (신뢰도 ~0.996)
   - “Tracking says delivered, but nothing arrived.” → delivery (신뢰도 ~0.996)
@@ -50,13 +50,13 @@ device       = "cuda"
 
 ## 5. 최적화 결과
 ### 동적 양자화
-![alt text](quantized_dynamic.png)
+![alt text](/text_classification-main/quantized_dynamic.png)
 - 크기 -45.9% (828.6MB → 448.0MB)
 - 처리량 +113.6% (≈8.7 → ≈18.7 infer/s)
 - 평균 확률 차이 ~0.164: CPU 배포용으로 속도 이득이 크고, 정확도 영향은 허용 가능한 수준
 
 ### 4비트 양자화
-![alt text](quantized_4bit.png)
+![alt text](/text_classification-main/quantized_4bit.png)
 - 크기 -66.5% (828.6MB → 277.7MB)
 - 처리량 +227.6% (≈8.36 → ≈27.38 infer/s)
 - 평균 확률 차이 ~0.101: GPU에서 속도/용량 이득이 가장 큼
